@@ -39,7 +39,7 @@ The simulator uses a default annual rate of 10%, converted to a monthly rate.
 
 ### Contribution Selection Screen
 
-![Contribution Screen](screenshots/aporte-screen.png)
+![Contribution Screen](screenshots/tela-aporte.png)
 
 ---
 
