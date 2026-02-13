@@ -35,6 +35,17 @@ The simulator uses a default annual rate of 10%, converted to a monthly rate.
 
 ---
 
+## 📱 Screenshots
+
+### Contribution Selection Screen
+![Contribution Screen](screenshots/tela-aporte.png)
+
+### Result Screen
+![Result Screen](screenshots/tela-resultado.png)
+
+---
+
+
 ## 🛠 Tech Stack
 
 - FlutterFlow
