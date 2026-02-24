@@ -44,8 +44,8 @@ The results are dynamically calculated and formatted in real time.
 
 ### Contribution Selection Screen
 
-![Contribution Screen](screenshots/tela-aporte.png)
-
+![Contribution Screen](screenshots_initial.png)
+![Contribution Screen](screenshots_result.png)
 ---
 
 ## 🚀 Current Features
