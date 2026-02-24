@@ -42,10 +42,9 @@ The results are dynamically calculated and formatted in real time.
 
 ## 📸 Screenshots
 
-### Contribution Selection Screen
-
-![Contribution Screen](screenshots_initial.png)
-![Contribution Screen](screenshots_result.png)
+| Initial Simulation | Result Example |
+|--------------------|----------------|
+| ![](screenshots/screenshots_initial.png) | ![](screenshots/screenshots_result.png) |
 ---
 
 ## 🚀 Current Features
