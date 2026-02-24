@@ -64,16 +64,17 @@ Structured state management
 
 ---
 
-## 🧠 What This Project Demonstrates
+## 🧠 Technical Highlights
 
-This project demonstrates:
-Logical structuring of financial calculations
-State handling inside a low-code environment
-Product-oriented thinking
-UX refinement through iteration
-Problem solving through testing and validation
-It is part of an ongoing journey to deepen technical skills while building real, usable products.
+Structured Page State architecture
+Dynamic calculation without page reload
+Custom compound interest function with recurring deposits
+Safe numeric handling
+Financial rounding validation
+
+This project demonstrates logical structuring, financial modeling, and state control inside a low-code + custom logic environment.
 ---
+
 ## 🛠 Tech Stack
 
 FlutterFlow
