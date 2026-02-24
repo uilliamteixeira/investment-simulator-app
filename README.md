@@ -73,6 +73,7 @@ Safe numeric handling
 Financial rounding validation
 
 This project demonstrates logical structuring, financial modeling, and state control inside a low-code + custom logic environment.
+
 ---
 
 ## 🛠 Tech Stack
