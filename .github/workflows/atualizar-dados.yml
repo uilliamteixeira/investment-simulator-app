@@ -1,0 +1,41 @@
+name: Atualizar dados de FIIs
+
+# Gera fiis.json (CVM + B3) e publica no branch "dados", sem tocar no main.
+# O app lê: https://raw.githubusercontent.com/uilliamteixeira/investment-simulator-app/dados/fiis.json
+
+on:
+  schedule:
+    # 23:30 UTC (20:30 em Brasília), de segunda a sexta: a B3 publica o arquivo do dia no fim da tarde.
+    - cron: '30 23 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Gerar fiis.json
+        run: node robo/gerar.mjs saida
+      - name: Publicar no branch dados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin dados >/dev/null; then
+            git fetch --depth 1 origin dados
+            git worktree add -B dados ../dados origin/dados
+          else
+            git worktree add --orphan -b dados ../dados
+          fi
+          cp saida/fiis.json ../dados/fiis.json
+          cd ../dados
+          git add fiis.json
+          if git diff --cached --quiet; then echo "Sem mudanças"; exit 0; fi
+          git commit -m "Dados de $(date -u +%Y-%m-%d)"
+          git push origin dados
