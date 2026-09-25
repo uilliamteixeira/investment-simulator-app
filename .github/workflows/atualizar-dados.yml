@@ -7,6 +7,12 @@ on:
   schedule:
     # 23:30 UTC (20:30 em Brasília), de segunda a sexta: a B3 publica o arquivo do dia no fim da tarde.
     - cron: '30 23 * * 1-5'
+  # Quando o robô ou este workflow mudam, os dados são regerados na hora.
+  push:
+    branches: [main]
+    paths:
+      - 'robo/**'
+      - '.github/workflows/atualizar-dados.yml'
   workflow_dispatch:
 
 permissions:
